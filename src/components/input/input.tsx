@@ -1,16 +1,24 @@
-import styles from './module.input.css';
+import './input.css';
 
 export const Input = (props) => (
-	<button
-		className={`
-			${styles.button}
-			${styles[addClass]}
-			${sort === SORTING_ORDER.DESCENDING ? styles.up : ''}
-			${sort === SORTING_ORDER.ASCENDING ? styles.down : ''}
-			`}
-		{...props}
-		type={type || 'button'}
+	<div
+		style={{
+			transform: `scale(${1.2})`,
+			transformOrigin: 'center left',
+			width: `${100 / 1.2}%`
+		}}
 	>
-		{children}
-	</button>
+		<label className="label asterisk" htmlFor={props.id}>
+			{props.label}
+		</label>
+		<p className="description">{props.description}</p>
+		<input
+			id={props.id}
+			name={props.name}
+			className="input"
+			placeholder={props.placeholder}
+			style={{ borderRadius: '20px'}}
+		/>
+		{props.error && <p className="error">{props.error}</p>}
+	</div>
 );
