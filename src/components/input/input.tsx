@@ -8,6 +8,7 @@ export const Input = (props) => (
 		<p className={styles.description}>{props.description}</p>
 		<input
 			id={props.id}
+			type={props.type || 'text'}
 			name={props.name}
 			className={`${styles.input}`}
 			placeholder={props.placeholder}

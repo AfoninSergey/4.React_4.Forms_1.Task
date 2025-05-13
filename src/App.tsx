@@ -1,5 +1,5 @@
-import './App.css';
 import { Input } from './components';
+import './App.css';
 
 function App() {
 	return (
@@ -12,10 +12,10 @@ function App() {
 				placeholder="Input placeholder"
 				variant=""
 				size=""
-        radius=""
-        asterisk=""
-        error="error"
-			/>
+				radius=""
+				asterisk=""
+				error="error"
+			/>		
 		</>
 	);
 }
