@@ -1,24 +1,17 @@
-import './input.css';
+import styles from './module.input.module.css';
 
 export const Input = (props) => (
-	<div
-		style={{
-			transform: `scale(${1.2})`,
-			transformOrigin: 'center left',
-			width: `${100 / 1.2}%`
-		}}
-	>
-		<label className="label asterisk" htmlFor={props.id}>
+	<div className={ `${styles.inputWrapper} ${styles.nick} ${styles.sizeMd}`}>
+		<label className={`${styles.label} ${styles.asterisk}`} htmlFor={props.id}>
 			{props.label}
 		</label>
-		<p className="description">{props.description}</p>
+		<p className={styles.description}>{props.description}</p>
 		<input
 			id={props.id}
 			name={props.name}
-			className="input"
+			className={`${styles.input}`}
 			placeholder={props.placeholder}
-			style={{ borderRadius: '20px'}}
 		/>
-		{props.error && <p className="error">{props.error}</p>}
+		{props.error && <p className={styles.error}>{props.error}</p>}
 	</div>
 );
