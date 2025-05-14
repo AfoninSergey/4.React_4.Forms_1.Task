@@ -1,35 +1,65 @@
 import styles from './module.input.module.css';
 
-export const Input = (props) => (
-	<div
-		className={`
+interface InputProps {
+	id: string;
+	name: string;
+	type?: string;
+	label: string;
+	description: string;
+	placeholder: string;
+	value: string;
+	onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+	variant: string;
+	size: string;
+	radius: string;
+	error: string | null;
+	asterisk?: boolean;
+	nick?: boolean;
+}
+
+export const Input = (props: InputProps) => {
+	const {
+		id,	
+		label,
+		description,
+		variant,
+		size,
+		radius,
+		error,
+		asterisk,
+		nick,
+		type='text',
+		...restProps
+	} = props;
+
+	return (
+		<div
+			className={`
 		${styles.inputWrapper}
-		${styles[props.size]}
-		${props.nick ? styles.nick : ''}`}
-	>
-		<label
-			className={`
-				${styles.label}
-				${props.asterisk ? styles.asterisk : ''}`}
-			htmlFor={props.id}
+		${styles[size]}
+		${nick ? styles.nick : ''}`}
 		>
-			{props.label}
-		</label>
-		<p className={styles.description}>{props.description}</p>
-		<input
-			id={props.id}
-			type={props.type || 'text'}
-			name={props.name}
-			placeholder={props.placeholder}
-			value={props.value}
-			onChange={props.onChange}
-			required={props.asterisk}
-			className={`
+			<label
+				className={`
+				${styles.label}
+				${asterisk ? styles.asterisk : ''}`}
+				htmlFor={id}
+			>
+				{label}
+			</label>
+			<p className={styles.description}>{description}</p>
+			<input
+				id={id}
+				type={type}
+				required={!!asterisk}
+				className={`
 				${styles.input}
-				${styles[props.radius]}
-				${styles[props.variant]}
-				${props.error ? styles.error : ''}`}
-		/>
-		{props.error && <p className={styles.errorBlock}>{props.error}</p>}
-	</div>
-);
+				${styles[radius]}
+				${styles[variant]}
+				${error ? styles.error : ''}`}
+				{...restProps}
+			/>
+			{error && <p className={styles.errorBlock}>{error}</p>}
+		</div>
+	);
+};
