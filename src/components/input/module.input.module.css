@@ -1,5 +1,6 @@
 .inputWrapper {
 	position: relative;
+	padding-bottom: 60px;
 }
 .inputWrapper.sizeXs {
 	transform: scale(0.5);
@@ -31,13 +32,13 @@
 	position: absolute;
 	content: '@';
 	color: #8b8b8b;
-	bottom: 33%;
+	bottom: 41%;
 	left: 6px;
 	font-weight: bold;
 	font-size: 1.2em;
 }
 
-.input {
+.input, .default {
 	color: #e2e2e2;
 	font-size: 1.3em;
 	width: 100%;
@@ -98,6 +99,8 @@
 	position: absolute;
 }
 
-.error {
+.errorBlock {
 	color: #ff0000;
+	position: absolute;
+	margin: 0;	
 }

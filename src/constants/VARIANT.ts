@@ -1,5 +1,5 @@
 export const VARIANT = {
-	DEFAULT: '',
+	DEFAULT: 'default',
 	FILLED: 'filled',
 	UNSTYLED: 'unstyled'
 };
