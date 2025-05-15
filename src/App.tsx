@@ -1,10 +1,11 @@
 import { Signin } from './components';
+import { onSubmit } from './handlers';
 import './App.css';
 
 function App() {
 	return (
 		<>
-			<Signin />
+			<Signin onSubmit={onSubmit}/>
 		</>
 	);
 }

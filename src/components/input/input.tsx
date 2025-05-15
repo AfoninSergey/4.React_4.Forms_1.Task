@@ -1,3 +1,4 @@
+import type { ChangeEvent } from 'react';
 import styles from './module.input.module.css';
 
 interface InputProps {
@@ -8,7 +9,7 @@ interface InputProps {
 	description: string;
 	placeholder: string;
 	value: string;
-	onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+	onChange: (event: ChangeEvent<HTMLInputElement>) => void;
 	variant: string;
 	size: string;
 	radius: string;
@@ -19,7 +20,7 @@ interface InputProps {
 
 export const Input = (props: InputProps) => {
 	const {
-		id,	
+		id,
 		label,
 		description,
 		variant,
@@ -28,7 +29,7 @@ export const Input = (props: InputProps) => {
 		error,
 		asterisk,
 		nick,
-		type='text',
+		type = 'text',
 		...restProps
 	} = props;
 
