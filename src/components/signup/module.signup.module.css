@@ -1,0 +1,14 @@
+.gender {
+	display: flex;
+	justify-content: center;
+	padding: 10px 10px 30px;
+	gap: 20px;
+}
+.gender span {
+	font-size: 1.3em;
+	color: gray;
+	cursor: pointer;
+}
+input[type='radio']:checked + span  {
+    color: #e2e2e2;
+}

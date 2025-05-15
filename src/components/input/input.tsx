@@ -13,7 +13,7 @@ interface InputProps {
 	variant: string;
 	size: string;
 	radius: string;
-	error: string | null;
+	error?: string | null;
 	asterisk?: boolean;
 	nick?: boolean;
 }
