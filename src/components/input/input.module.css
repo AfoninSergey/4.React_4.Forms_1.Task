@@ -1,0 +1,107 @@
+.inputWrapper {
+	position: relative;
+	padding-bottom: 40px;
+}
+.sizeXs {
+	transform: scale(0.5);
+	transform-origin: center left;
+	width: 200%;
+}
+.sizeSm {
+	transform: scale(0.75);
+	transform-origin: center left;
+	width: 133%;
+}
+.sizeMd {
+	transform: scale(1);
+	transform-origin: center left;
+	width: 100%;
+}
+.sizeLg {
+	transform: scale(1.25);
+	transform-origin: center left;
+	width: 80%;
+}
+.sizeXl {
+	transform: scale(1.5);
+	transform-origin: center left;
+	width: 65%;
+}
+
+.icon::before {
+	position: absolute;
+	content: '@';
+	color: #8b8b8b;
+	bottom:32%;
+	left: 6px;
+	font-weight: bold;
+	font-size: 1.2em;
+}
+
+.input, .default {
+	color: #e2e2e2;
+	font-size: 1.3em;
+	width: 100%;
+	box-sizing: border-box;
+	height: 35px;
+	padding: 5px 10px;
+}
+.filled {
+	border: none;
+}
+.unstyled {
+	border: none;
+	padding: 7px 0;
+	background-color: transparent;
+	outline: none;
+}
+.input.error {
+	border-color: #ff0000;
+	outline: none;
+}
+.input.error::placeholder {
+	color: #ff0000;
+}
+.radiusXs {
+	border-radius: 1px;
+}
+.radiusSm {
+	border-radius: 6px;
+}
+.radiusMd {
+	border-radius: 11px;
+}
+.radiusLg {
+	border-radius: 16px;
+}
+.radiusXl {
+	border-radius: 20px;
+}
+.icon .input {
+	padding-left: 30px;
+}
+
+.label {
+	position: relative;
+	font-size: 1.2em;
+}
+
+.description {
+	font-size: 1em;
+	margin: 5px 0;
+	color: #aaaaaa;
+}
+
+.asterisk::before {
+	content: '*';
+	color: #ff0000;
+	right: -12px;
+	position: absolute;
+}
+
+.errorBlock {
+	color: #ff0000;
+	position: absolute;
+	margin: 0;
+	font-size: .8em;	
+}
