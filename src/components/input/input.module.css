@@ -2,33 +2,33 @@
 	position: relative;
 	padding-bottom: 40px;
 }
-.inputWrapper.sizeXs {
+.sizeXs {
 	transform: scale(0.5);
 	transform-origin: center left;
 	width: 200%;
 }
-.inputWrapper.sizeSm {
+.sizeSm {
 	transform: scale(0.75);
 	transform-origin: center left;
 	width: 133%;
 }
-.inputWrapper.sizeMd {
+.sizeMd {
 	transform: scale(1);
 	transform-origin: center left;
 	width: 100%;
 }
-.inputWrapper.sizeLg {
+.sizeLg {
 	transform: scale(1.25);
 	transform-origin: center left;
 	width: 80%;
 }
-.inputWrapper.sizeXl {
+.sizeXl {
 	transform: scale(1.5);
 	transform-origin: center left;
 	width: 65%;
 }
 
-.inputWrapper.nick::before {
+.icon::before {
 	position: absolute;
 	content: '@';
 	color: #8b8b8b;
@@ -46,10 +46,10 @@
 	height: 35px;
 	padding: 5px 10px;
 }
-.input.filled {
+.filled {
 	border: none;
 }
-.input.unstyled {
+.unstyled {
 	border: none;
 	padding: 7px 0;
 	background-color: transparent;
@@ -62,22 +62,22 @@
 .input.error::placeholder {
 	color: #ff0000;
 }
-.input.radiusXs {
+.radiusXs {
 	border-radius: 1px;
 }
-.input.radiusSm {
+.radiusSm {
 	border-radius: 6px;
 }
-.input.radiusMd {
+.radiusMd {
 	border-radius: 11px;
 }
-.input.radiusLg {
+.radiusLg {
 	border-radius: 16px;
 }
-.input.radiusXl {
+.radiusXl {
 	border-radius: 20px;
 }
-.nick .input {
+.icon .input {
 	padding-left: 30px;
 }
 

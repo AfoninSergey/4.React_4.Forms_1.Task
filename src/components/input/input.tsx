@@ -1,5 +1,5 @@
 import type { ChangeEvent } from 'react';
-import styles from './module.input.module.css';
+import styles from './input.module.css';
 
 interface InputProps {
 	id: string;
@@ -15,7 +15,7 @@ interface InputProps {
 	radius: string;
 	error?: string | null;
 	asterisk?: boolean;
-	nick?: boolean;
+	icon?: boolean;
 }
 
 export const Input = (props: InputProps) => {
@@ -28,7 +28,7 @@ export const Input = (props: InputProps) => {
 		radius,
 		error,
 		asterisk,
-		nick,
+		icon,
 		type = 'text',
 		...restProps
 	} = props;
@@ -38,7 +38,7 @@ export const Input = (props: InputProps) => {
 			className={`
 		${styles.inputWrapper}
 		${styles[size]}
-		${nick ? styles.nick : ''}`}
+		${icon ? styles.icon : ''}`}
 		>
 			<label
 				className={`

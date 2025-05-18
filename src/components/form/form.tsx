@@ -1,13 +1,12 @@
-import type { FormEventHandler,ReactNode } from 'react';
-import styles from './module.form.module.css';
+import type { FC, FormEventHandler, ReactNode } from 'react';
+import styles from './form.module.css';
 
-export const Form = ({
-	onSubmit,
-	children
-}: {
+interface FormProps {
 	onSubmit: FormEventHandler<HTMLFormElement>;
 	children: ReactNode;
-}) => (
+}
+
+export const Form: FC<FormProps> = ({ onSubmit, children }) => (
 	<form onSubmit={onSubmit} className={styles.form}>
 		{children}
 	</form>
